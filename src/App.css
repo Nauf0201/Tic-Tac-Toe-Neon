@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+@keyframes glow {
+  0%   { box-shadow: 0 0 5px #ffaa3b, 0 0 10px #ffaa3b; }
+  50%  { box-shadow: 0 0 20px #ffaa3b, 0 0 30px #ffaa3b; }
+  100% { box-shadow: 0 0 5px #ffaa3b, 0 0 10px #ffaa3b; }
+}
+
+.winning-square {
+  background-color: #ffeb3b !important; /* kuning terang */
+  animation: glow 1s infinite ease-in-out;
+}
