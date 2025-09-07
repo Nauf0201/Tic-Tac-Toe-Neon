@@ -132,6 +132,10 @@ function App() {
           osetscore(oscore += 1)
         }
       }
+      if (!board.includes(null) && win == false) {
+        setbroadcast("Draw!");
+        setwin(true);
+      }
     }
 
 
@@ -151,7 +155,7 @@ function App() {
             <div key={index}>
               <button
                 onClick={() => handleClick(index)}
-                className={`h-20 w-20 bg-cyan-500 m-2 hover:bg-blue-500 hover:shadow-blue-500/50 hover:scale-90 transition duration-100 rounded-lg shadow-lg shadow-cyan-500/50 text-pretty font-extrabold ${clickcolor}`}
+                className={`h-20 w-20 bg-cyan-500 m-2 hover:bg-blue-500 hover:shadow-blue-500/50 hover:scale-90 transition duration-100 rounded-lg shadow-lg shadow-cyan-500/50 text-pretty font-extrabold ${clickcolor} `}
               >
                 {square}
               </button>
